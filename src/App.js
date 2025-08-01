@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from  './components/header';
+import Header from './components/Header';
+import Section from './components/Section';
 
 function App() {
   return (
       <>
       <Header />
         <main>
-          <h1 className="text-2xl p-4">굳잡</h1>
+            <Section />
         </main>
       </>
   );
