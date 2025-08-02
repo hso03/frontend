@@ -4,7 +4,7 @@ export default function Join() {
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                <a href="/" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                     회원가입
                 </a>
                 <div
@@ -66,7 +66,7 @@ export default function Join() {
                             </button>
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                                 이미 아이디가 있으신가요?
-                                <a href="#" className="ml-1 font-medium text-primary-600 hover:underline dark:text-primary-500">
+                                <a href="/" className="ml-1 font-medium text-primary-600 hover:underline dark:text-primary-500">
                                     로그인 페이지로 가기
                                 </a>
                             </p>

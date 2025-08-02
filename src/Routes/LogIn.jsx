@@ -45,7 +45,7 @@ export default function LogIn() {
                                         </label>
                                     </div>
                                 </div>
-                                <a href="#"
+                                <a href="/"
                                    className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">
                                     비밀번호 찾기
                                 </a>
