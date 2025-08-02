@@ -4,13 +4,10 @@ export default function Information() {
     return (
         <section className="bg-white dark:bg-gray-900">
             <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                <div className="max-w-screen-md mb-8 lg:mb-16">
+                <div className="max-w-screen-xl mb-8 lg:mb-16">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                         What technologies were used to build this website?
                     </h2>
-                    <p className="text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets
-                        where technology, innovation, and capital can unlock long-term value and drive economic
-                        growth.</p>
                 </div>
                 <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                     <div>
@@ -23,10 +20,10 @@ export default function Information() {
                                       clip-rule="evenodd"></path>
                             </svg>
                         </div>
-                        <h3 className="mb-2 text-xl font-bold dark:text-white">React.js</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Plan it, create it, launch it. Collaborate
-                            seamlessly with all the organization and hit your marketing goals every month with our
-                            marketing plan.</p>
+                        <h3 className="mb-2 text-xl font-bold dark:text-white">React</h3>
+                        <p className="text-gray-500 dark:text-gray-400">
+                            이 홈페이지는 Front는 React를 사용하여 만들어졌습니다.
+                        </p>
                     </div>
                     <div>
                         <div
@@ -38,8 +35,9 @@ export default function Information() {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">SpringBoot</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay
-                            compliant with our structured workflows and custom permissions made for you.</p>
+                        <p className="text-gray-500 dark:text-gray-400">
+                            홈페이지에서 사용되는 API들은 JavaSpringBoot를 사용하여 만들었습니다.
+                        </p>
                     </div>
                     <div>
                         <div
@@ -54,8 +52,9 @@ export default function Information() {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">AWS EC2</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much
-                            more. Now power up with hundreds of new templates to help you get started.</p>
+                        <p className="text-gray-500 dark:text-gray-400">
+                            Amazon의 AWS EC2를 사용하였습니다.
+                        </p>
                     </div>
                     <div>
                         <div
@@ -70,8 +69,9 @@ export default function Information() {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">AWS RDS</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Audit-proof software built for critical
-                            financial operations like month-end close and quarterly budgeting.</p>
+                        <p className="text-gray-500 dark:text-gray-400">
+                            Amazon의 AWS RDS를 사용하여 DB서버를 관리하고 있습니다.
+                        </p>
                     </div>
                     <div>
                         <div
@@ -83,8 +83,9 @@ export default function Information() {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">MySQL</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Craft beautiful, delightful experiences for both
-                            marketing and product with real cross-company collaboration.</p>
+                        <p className="text-gray-500 dark:text-gray-400">
+                            다양한 RDBMS가 있지만 제가 가장 많이 사용해본 MySQL을 사용하였습니다.
+                        </p>
                     </div>
                     <div>
                         <div
@@ -97,8 +98,9 @@ export default function Information() {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">Git Action</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Keep your company’s lights on with customizable,
-                            iterative, and structured workflows built for all efficient teams and individual.</p>
+                        <p className="text-gray-500 dark:text-gray-400">
+                            GitHub에서 지원해주는 GitAction을 사용하여 CI/CD를 구축하였습니다.
+                        </p>
                     </div>
                 </div>
             </div>
