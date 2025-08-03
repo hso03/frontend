@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,11 +23,21 @@ jobs:
       - name: 빌드 실행
         run: npm run build
 
-      - name: EC2에 배포 (scp로 build 디렉토리 전송)
+      - name: EC2에 build 디렉토리 전송 (scp)
         run: |
           echo "$PRIVATE_KEY" > key.pem
           chmod 400 key.pem
-          scp -r -i key.pem ./build ubuntu@${EC2_HOST}:/home/ubuntu/react-app
+          scp -r -o StrictHostKeyChecking=no -i key.pem ./build ubuntu@${EC2_HOST}:/home/ubuntu/react-app
         env:
           PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           EC2_HOST: ${{ secrets.EC2_HOST }}
+
+      - name: EC2에서 배포 명령 실행 (appleboy ssh)
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/react-app
+            # 필요한 경우 권한 변경이나 서비스 재시작
