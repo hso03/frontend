@@ -8,7 +8,7 @@ export default function Function() {
                     <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shop by
                         category</h2>
 
-                    <a href="#" title=""
+                    <a href="/function" title=""
                        className="flex items-center text-base font-medium text-primary-700 hover:underline dark:text-primary-500">
                         See more categories
                         <svg className="ms-1 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -29,7 +29,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">내 IP 확인하기</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export default function Function() {
                         <span
                             className="text-sm font-medium text-gray-900 dark:text-white">Collectibles &amp; Toys</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Books</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Fashion/Clothes</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Sports &amp; Outdoors</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Painting &amp; Hobby</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Electronics</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Food &amp; Grocery</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Music</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">TV/Projectors</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -125,7 +125,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Health &amp; beauty</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -134,7 +134,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Home Air Quality</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -143,7 +143,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Gaming/Consoles</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -152,7 +152,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Car &amp; Motorbike</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -163,7 +163,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Photo/Video</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -177,7 +177,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Security & Wi-Fi</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -190,7 +190,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Computer Peripherals</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -199,7 +199,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Phone Accessories</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -208,7 +208,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Watches</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -218,7 +218,7 @@ export default function Function() {
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Printers</span>
                     </a>
 
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -227,7 +227,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Projectors</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -236,7 +236,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Skin Care</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -247,7 +247,7 @@ export default function Function() {
                         </svg>
                         <span className="text-sm font-medium text-gray-900 dark:text-white">Photo/Video</span>
                     </a>
-                    <a href="#"
+                    <a href="/function"
                        className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <svg className="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white" aria-hidden="true"
                              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
