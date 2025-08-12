@@ -7,7 +7,7 @@ export default function ClientIp(){
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/api/v1/ip")
+            .get("http://api.tennismeet.live/api/v1/ip")
             .then((res) => {
                 setData(res.data);
             })
