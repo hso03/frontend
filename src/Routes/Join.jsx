@@ -1,6 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 
 export default function Join() {
+
+    // 회원가입 정보
+    const [form, setForm] = useState({
+        email: "",
+        password: "",
+        username: "",
+        phoneNumber: "",
+    });
+
+    // 회원가입 정보 입력
+    const handleInputChange = event => {
+        setForm({
+            ...form,
+            [event.target.name]: event.target.value,
+        })
+    };
+
+    // 회원가입 로직
+    const handleSubmit = async event => {
+        event.preventDefault() //  폼 제출시 새로고침 방지
+        try{
+
+            const response = await axios.post("http://api.tennismeet.live/api/v1/join", form);
+
+            alert("회원가입 성공");
+
+        } catch(error) {
+            console.error(error);
+            alert("알 수 없는 이유로 회원가입에 실패 하였습니다. 다시 시도해보세요");
+        }
+    };
+
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -13,13 +46,13 @@ export default function Join() {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             정보 입력해주세요
                         </h1>
-                        <form className="space-y-4 md:space-y-6" action="#">
+                        <form className="space-y-4 md:space-y-6" onSubmit={ handleSubmit } action="/login">
                             <div>
                                 <label htmlFor="email"
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     이메일
                                 </label>
-                                <input type="email" name="email" id="email"
+                                <input type="email" name="email" id="email" value={form.email} onChange={handleInputChange}
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        placeholder="name@company.com" required=""/>
                             </div>
@@ -35,7 +68,7 @@ export default function Join() {
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     비밀번호 확인
                                     </label>
-                                <input type="confirm-password" name="confirm-password" id="confirm-password"
+                                <input type="confirm-password" name="confirm-password" id="confirm-password" value={form.password} onChange={handleInputChange}
                                        placeholder="••••••••"
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
@@ -45,17 +78,17 @@ export default function Join() {
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     이름
                                 </label>
-                                <input type="text" name="username" id="username"
+                                <input type="text" name="username" id="username" value={form.username} onChange={handleInputChange}
                                        placeholder="홍길동"
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
                             </div>
                             <div>
-                                <label htmlFor="phonenumber"
+                                <label htmlFor="phoneNumber"
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     연락처
                                 </label>
-                                <input type="text" name="phonenumber" id="phonenumber"
+                                <input type="text" name="phoneNumber" id="phoneNumber" value={form.phoneNumber} onChange={handleInputChange}
                                        placeholder="010-1234-5678"
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
