@@ -19,12 +19,29 @@ export default function Join() {
         })
     };
 
+    // 비밀번호 확인용 state
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+    // 비밀번호 확인 입력
+    const handleConfirmPasswordChange = event => {
+        setConfirmPassword(event.target.value);
+    };
+
     // 회원가입 로직
     const handleSubmit = async event => {
+
         event.preventDefault() //  폼 제출시 새로고침 방지
+
+        if(form.password !== confirmPassword){
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+        }
+
         try{
 
             const response = await axios.post("http://api.tennismeet.live/api/v1/join", form);
+
+            console.log(response);
 
             alert("회원가입 성공");
 
@@ -59,16 +76,16 @@ export default function Join() {
                             <div>
                                 <label htmlFor="password"
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">비밀번호</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••"
+                                <input type="password" name="password" id="password" placeholder="••••••••" value={form.password} onChange={handleInputChange}
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
                             </div>
                             <div>
-                                <label htmlFor="confirm-password"
+                                <label htmlFor="confirmPassword"
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     비밀번호 확인
                                     </label>
-                                <input type="confirm-password" name="confirm-password" id="confirm-password" value={form.password} onChange={handleInputChange}
+                                <input type="password" name="confirmPassword" id="confirmPassword"  value={confirmPassword} onChange={handleConfirmPasswordChange}
                                        placeholder="••••••••"
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
