@@ -1,14 +1,18 @@
 import React, {useState} from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Join() {
 
+    // redirect 용
+    const navigate = useNavigate();
+
     // 회원가입 정보
     const [form, setForm] = useState({
-        email: "",
-        password: "",
-        username: "",
-        phoneNumber: "",
+        memberEmail: "",
+        memberName: "",
+        memberPassword: "",
+        memberMobile: "",
     });
 
     // 회원가입 정보 입력
@@ -32,18 +36,17 @@ export default function Join() {
 
         event.preventDefault() //  폼 제출시 새로고침 방지
 
-        if(form.password !== confirmPassword){
+        if(form.memberPassword !== confirmPassword){
             alert("비밀번호가 일치하지 않습니다.");
             return;
         }
 
         try{
 
-            const response = await axios.post("http://api.tennismeet.live/api/v1/join", form);
-
+            const response = await axios.post("http://api.tennismeet.live/api/v1/member/join", form);
             console.log(response);
-
             alert("회원가입 성공");
+            navigate("/login");
 
         } catch(error) {
             console.error(error);
@@ -63,20 +66,20 @@ export default function Join() {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             정보 입력해주세요
                         </h1>
-                        <form className="space-y-4 md:space-y-6" onSubmit={ handleSubmit } action="/login">
+                        <form className="space-y-4 md:space-y-6" onSubmit={ handleSubmit } >
                             <div>
                                 <label htmlFor="email"
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     이메일
                                 </label>
-                                <input type="email" name="email" id="email" value={form.email} onChange={handleInputChange}
+                                <input type="email" name="memberEmail" id="memberEmail" value={form.memberEmail} onChange={handleInputChange}
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        placeholder="name@company.com" required=""/>
                             </div>
                             <div>
                                 <label htmlFor="password"
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">비밀번호</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" value={form.password} onChange={handleInputChange}
+                                <input type="password" name="memberPassword" id="memberPassword" placeholder="••••••••" value={form.memberPassword} onChange={handleInputChange}
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
                             </div>
@@ -95,7 +98,7 @@ export default function Join() {
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     이름
                                 </label>
-                                <input type="text" name="username" id="username" value={form.username} onChange={handleInputChange}
+                                <input type="text" name="memberName" id="memberName" value={form.memberName} onChange={handleInputChange}
                                        placeholder="홍길동"
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
@@ -105,7 +108,7 @@ export default function Join() {
                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     연락처
                                 </label>
-                                <input type="text" name="phoneNumber" id="phoneNumber" value={form.phoneNumber} onChange={handleInputChange}
+                                <input type="text" name="memberMobile" id="memberMobile" value={form.memberMobile} onChange={handleInputChange}
                                        placeholder="010-1234-5678"
                                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        required=""/>
