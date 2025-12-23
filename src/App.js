@@ -7,6 +7,7 @@ import LogIn from "./Routes/LogIn";
 import Join from "./Routes/Join";
 import Function from "./Routes/Function";
 import ClientIp from "./function/ClientIp";
+import DrugInfo from "./Routes/DrugInfo";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/join" element={ <Join /> } />
                     <Route path="/function" element={ <Function /> } />
                     <Route path="/function/clientIp" element={ <ClientIp /> } />
+                    <Route path="/drugInfo" element={ <DrugInfo />} />
                 </Routes>
             </main>
       </Router>
