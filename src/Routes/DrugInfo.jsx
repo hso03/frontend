@@ -4,60 +4,106 @@ import axios from "axios";
 export default function DrugInfo() {
 
     const [drugInfo, setDrugInfo] = useState([]);
+    const [page, setPage] = useState(1);        // 현재 페이지
+    const [totalCount, setTotalCount] = useState(0);  // API 전체 데이터 개수
+    const rows = 10; // numOfRows
 
-    useEffect(()=>{
+    const fetchDrugList = (pageNo) => {
         axios.get("http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList",{
             params: {
                 "ServiceKey": "anOR0hKUj8UiQTCTcgxvw0YSa/qYx5MHXIuLJo8h2Q9vM7JQQge32wzijSjtlH+t8e/REWrKgxVcsIgETz4ARQ==",
-                "pageNo": "1",
-                "numOfRows": "10",
+                "pageNo": pageNo,
+                "numOfRows": rows,
                 "type": "json"
             }
         })
             .then(res => {
-                const drugList = res.data.body.items;
-                setDrugInfo(drugList);
+                const body = res.data.body;
+                setDrugInfo(body.items || []);
+                setTotalCount(body.totalCount || 0);
             })
-    }, []);
+    };
+
+    useEffect(()=>{
+        fetchDrugList(page);
+    }, [page]);
+
+    const totalPage = Math.ceil(totalCount / rows);
 
     return (
         <section className="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-16">
-            <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-                { drugInfo.length === 0 ? "로딩중....":drugInfo[0].entpName }
-                <ul role="list" className="divide-y divide-white/5">
-                    {drugInfo.map((drug) => (
-                        <li key={drug.entpName} className="flex justify-between gap-x-6 py-5">
-                            <label>{drug.entpName}</label>
-                            <p>entpName, itemName, itemSeq, efcyQesitm, useMethodQesitm, atpnWarnQesitm, atpnQesitm, intrcQesitm, seQesitm, depositMethodQesitm, openDe, updateDe, itemImage, bizrno</p>
-                            <div className="flex min-w-0 gap-x-4">
-                                <img
-                                    alt=""
-                                    src={drug.itemImage}
-                                    className="size-12 flex-none rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10"
-                                />
-                                <div className="min-w-0 flex-auto">
-                                    <p className="text-sm/6 font-semibold text-white">{drug.name}</p>
-                                    <p className="mt-1 truncate text-xs/5 text-gray-400">{drug.email}</p>
-                                </div>
-                            </div>
-                            <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                                <p className="text-sm/6 text-white">{drug.role}</p>
-                                {drug.lastSeen ? (
-                                    <p className="mt-1 text-xs/5 text-gray-400">
-                                        Last seen <time dateTime={drug.lastSeenDateTime}>{drug.lastSeen}</time>
-                                    </p>
-                                ) : (
-                                    <div className="mt-1 flex items-center gap-x-1.5">
-                                        <div className="flex-none rounded-full bg-emerald-500/30 p-1">
-                                            <div className="size-1.5 rounded-full bg-emerald-500" />
-                                        </div>
-                                        <p className="text-xs/5 text-gray-400">Online</p>
-                                    </div>
-                                )}
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-2xl font-semibold mb-6">약품 리스트</h1>
+
+                <div className="overflow-x-auto">
+                    <table className="min-w-full border border-gray-300 bg-white rounded-lg">
+                        <thead className="bg-gray-100">
+                        <tr>
+                            <th className="px-4 py-2 border">entpName</th>
+                            <th className="px-4 py-2 border">itemName</th>
+                            <th className="px-4 py-2 border">itemSeq</th>
+                            <th className="px-4 py-2 border">efcyQesitm</th>
+                            <th className="px-4 py-2 border">useMethodQesitm</th>
+                            {/*<th className="px-4 py-2 border">atpnWarnQesitm</th>*/}
+                            {/*<th className="px-4 py-2 border">atpnQesitm</th>*/}
+                            {/*<th className="px-4 py-2 border">intrcQesitm</th>*/}
+                            {/*<th className="px-4 py-2 border">seQesitm</th>*/}
+                            {/*<th className="px-4 py-2 border">depositMethodQesitm</th>*/}
+                            {/*<th className="px-4 py-2 border">openDe</th>*/}
+                            {/*<th className="px-4 py-2 border">updateDe</th>*/}
+                            <th className="px-4 py-2 border">itemImage</th>
+                            {/*<th className="px-4 py-2 border">bizrno</th>*/}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {drugInfo.map((drug, idx) =>
+                            <tr key={idx}>
+                                <td className="px-4 py-2 border">{drug.entpName}</td>
+                                <td className="px-4 py-2 border">{drug.itemName}</td>
+                                <td className="px-4 py-2 border">{drug.itemSeq}</td>
+                                <td className="px-4 py-2 border">{drug.efcyQesitm}</td>
+                                <td className="px-4 py-2 border">{drug.useMethodQesitm}</td>
+                                {/*<td className="px-4 py-2 border">{drug.atpnWarnQesitm}</td>*/}
+                                {/*<td className="px-4 py-2 border">{drug.atpnQesitm}</td>*/}
+                                {/*<td className="px-4 py-2 border">{drug.intrcQesitm}</td>*/}
+                                {/*<td className="px-4 py-2 border">{drug.seQesitm}</td>*/}
+                                {/*<td className="px-4 py-2 border">{drug.depositMethodQesitm}</td>*/}
+                                {/*<td className="px-4 py-2 border">{drug.openDe}</td>*/}
+                                {/*<td className="px-4 py-2 border">{drug.updateDe}</td>*/}
+                                <td className="px-4 py-2 border">
+                                    <img src={drug.itemImage}
+                                         alt="item"
+                                         className="w-16 h-16 object-cover" />
+                                </td>
+                                {/*<td className="px-4 py-2 border">{drug.bizrno}</td>*/}
+                            </tr>
+                        )}
+                        </tbody>
+                    </table>
+                </div>
+
+                {/* 페이지네이션 */}
+                <div className="flex justify-center items-center gap-4 mt-6">
+                    <button
+                        className="px-3 py-1 border rounded bg-white hover:bg-gray-100 disabled:opacity-40"
+                        disabled={page === 1}
+                        onClick={() => setPage(page - 1)}
+                    >
+                        이전
+                    </button>
+
+                    <span className="px-3 py-1">
+                        {page} / {totalPage}
+                    </span>
+
+                    <button
+                        className="px-3 py-1 border rounded bg-white hover:bg-gray-100 disabled:opacity-40"
+                        disabled={page === totalPage}
+                        onClick={() => setPage(page + 1)}
+                    >
+                        다음
+                    </button>
+                </div>
             </div>
         </section>
     );
